@@ -13,7 +13,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 
 using MyMusic.Core;
+using MyMusic.Core.Services;
 using MyMusic.Data;
+using MyMusic.Services;
 
 namespace MyMusic.Api
 {
@@ -33,6 +35,9 @@ namespace MyMusic.Api
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddDbContext<MyMusicDbContext>(o =>
                 o.UseSqlServer(Configuration.GetConnectionString("Default")));
+
+            services.AddTransient<IMusicService, MusicService>();
+            services.AddTransient<IArtistService, ArtistService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
