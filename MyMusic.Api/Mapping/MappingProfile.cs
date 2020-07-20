@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using MyMusic.Api.Resources;
 using MyMusic.Core.Models;
 
@@ -11,6 +12,7 @@ namespace MyMusic.Api.Mapping
             // Domain to Resource
             CreateMap<Music, MusicResource>();
             CreateMap<Artist, ArtistResource>();
+            CreateMap<String, LoggedResource>();
 
             // Resource to Domain
             CreateMap<MusicResource, Music>();
