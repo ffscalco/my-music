@@ -13,7 +13,7 @@ Project in .net to play with multilayer architecture, repositories and Unit of W
 
 1. Install the pre-requisites above
 2. `$ git clone git@github.com:ffscalco/my-music.git` - Clone the project
-3. `$ cd my_music` - Go into the project folder
+3. `$ cd my-music` - Go into the project folder
 4. `$ docker-compose up -d` to spin up the database
 5. Using the nuget package manager console, run `$ Update-Database`
 
